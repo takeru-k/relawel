@@ -1027,7 +1027,7 @@ border-top-left-radius: 200px;
 .p-cta__wrap {
   padding: 40px 6%;
   max-width: 1200px;
-  margin-inline: ;
+  margin-inline: auto;
 }
 
 .p-cta__header span{
@@ -1078,7 +1078,7 @@ border-top-left-radius: 200px;
 }
 
 .p-cta__action--tel a{
-  font-size: clamp(1.5rem, 1.409rem + 0.45vw, 1.75rem);
+  font-size: clamp(1.5rem, 1.318rem + 0.91vw, 2rem);
   color: #555;
   display: inline-block;
   position: relative;
@@ -1095,8 +1095,9 @@ border-top-left-radius: 200px;
   transform: translateY(-50%);
 }
 
-.p-cta__action--tel{
+.p-cta__action--tel p{
   font-size: clamp(0.75rem, 0.705rem + 0.23vw, 0.875rem);
+  color: #555;
 }
 
 .p-cta__button{
@@ -1159,7 +1160,7 @@ border-top-left-radius: 200px;
 }
 
 
-@media (min-width: 1024px){
+@media (min-width: 1200px){
   .p-cta{
     padding: 40px 0;
     margin: 0 6%;
@@ -1167,11 +1168,12 @@ border-top-left-radius: 200px;
   }
 
   .p-cta__action{
-    padding: 40px 0;
+    padding: 40px 24px;
   }
   .p-cta__action{
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    gap: 12px;
   }
 }
 
