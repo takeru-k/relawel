@@ -32,3 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+//accordion
+const items = document.querySelectorAll(".accordion button");
+
+items.forEach((item, index) => {
+  // 各ボタンにユニークなIDを生成して設定
+  item.setAttribute('id', `accordion-button-${index + 1}`);
+
+  item.addEventListener('click', function() {
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !isExpanded);
+  });
+});
