@@ -745,6 +745,16 @@ border-top-left-radius: 200px;
   .p-feature-list__title{
     text-align: center;
   }
+
+  .p-feature-list__image{
+    width: 250px;
+    height: 200px;
+  }
+  .p-feature-list__image img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 /*================================
