@@ -6,7 +6,7 @@
   --bg-color: #f9f9f9;
   --sub-color: #FCF9F7;
   --footer-font-color: #a6adb6;
-  --base-font: "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK JP Subset","Yu Gothic Medium", "游ゴシック Medium", "Yu Gothic", "游ゴシック", YuGothic,"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
+  --base-font: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "arial";
     --title-font: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
   --english-font:  "Montserrat", sans-serif;
 }
