@@ -345,6 +345,9 @@ background: var(--bg-color);
 }
 
 @media (min-width: 1200px){
+  .l-header{
+    position: fixed;
+  }
   .l-header__logo img{
     width: 160px;
   }
@@ -1267,6 +1270,7 @@ border-top-left-radius: 200px;
 	page-header
 =================================*/
 .l-page-header {
+
   padding-bottom: 24px;
   border-bottom: 1px solid var(--border-color);
 }
@@ -1294,6 +1298,12 @@ border-top-left-radius: 200px;
   .l-page-header__wrap .c-button {
     align-self: end;
     margin-right: 0;
+  }
+}
+
+@media (min-width: 1024px){
+  .l-page-header{
+      margin-top: 40px;
   }
 }
 
@@ -1448,8 +1458,82 @@ border-top-left-radius: 200px;
   }
 }
 
+
+@media (min-width: 1024px){
+  
+
+/* 親要素の.l-innerをFlexコンテナにする */
+.p-article__wrap {
+    display: flex;
+  justify-content: space-between; /* 要素間のスペースを均等に開ける */
+  align-items: flex-start; /* 要素を上揃えにする */
+}
+
+.p-article{
+  width: 100%;
+    max-width: 792px;
+}
+
 /*================================
-	サービス提供の流れ
+	サイドメニュー
+=================================*/
+
+
+
+
+
+
+
+
+/* サイドメニューのスタイル */
+.c-side-menu {
+  width: 100%;
+  max-width: 200px;
+  padding: 20px;
+  position: sticky; /* スクロールしてもメニューを固定する */
+  top: 80px; /* 画面の上から20pxの位置に固定 */
+}
+
+
+
+.c-side-menu li a {
+  display: block; /* リンクをブロック要素にしてクリック範囲を広げる */
+  padding: 10px 0;
+  text-decoration: none; /* 下線を消す */
+  font-weight: bold;
+  position: relative;
+  padding-left: 24px;
+}
+
+.c-side-menu li a::before{
+  position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--main-color);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;;
+}
+
+.c-side-menu li a:hover {
+  color: var(--main-color); /* ホバー時の色 */
+}
+
+
+
+}
+
+@media not all and (min-width: 1023px){
+  .c-side-menu{
+    display: none;
+  }
+}
+
+
+/*================================
+	提供サービスについて
 =================================*/
 
 .c-step{
@@ -1465,16 +1549,34 @@ border-top-left-radius: 200px;
 }
 
 .c-step__item{
-  display: flex;
+  display: grid;
+  grid-template-columns: 36px 1fr;
   gap: 12px;
 }
 
-.c-step__number{
-  border-radius: 6px;
+.c-step__num{
+  margin-top: 4px;
+ z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--dark-color);
+  border-radius: 50%;
+}
+
+.c-step__num span{
   color: #fff;
-  background: var(--main-color);
+}
+
+.c-step__number{
+  border-radius: 50%;
+  color: #fff;
+  background: var(--dark-color);
   height: fit-content;
-  padding: 0 8px;
+  padding:8px;
   margin-top: 4px;
 }
 
@@ -1485,7 +1587,8 @@ border-top-left-radius: 200px;
 }
 
 .c-step__heading{
-  font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
+  font-size: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem);
+  font-weight: bold;
 }
 
 .c-step__desc{
@@ -1664,7 +1767,6 @@ border-top-left-radius: 200px;
   right: 0;
   width: 22px;
   height: 22px;
-  border: 1px solid;
   border-radius: 22px;
 }
 .accordion button .icon::before {
