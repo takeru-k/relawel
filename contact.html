@@ -91,105 +91,117 @@
 
           <div class="p-contact__lead">
             <p>
-              メールでのお問い合わせは、下記フォームへ必要事項をご記入いただき送信してください。
+              メールでのお問い合わせは、下記フォームへ必要事項を入力の上、送信してください。
             </p>
-            <p>※<span class="require">*</span>が付いている項目は必須です。</p>
+            <p class="p-contact__require">
+              ※<span class="require">*</span>が付いている項目は必須です。
+            </p>
           </div>
           <!-- /.p-contact__lead -->
 
           <div class="p-contact__form">
             <div class="c-form">
-              <table class="contactTable">
+              <table class="c-form__table">
                 <tbody>
+                  <!-- 会社名・屋号 -->
                   <tr>
                     <th>
-                      <label for="company" class="inputLabel"
-                        >会社名・屋号<span class="require">*</span></label
-                      >
+                      <label for="company" class="c-form__label">
+                        会社名・屋号<span class="require">*</span>
+                      </label>
                     </th>
                     <td>
-                      <div class="inputField">
-                        <input type="text" id="name" name="name" />
+                      <div class="c-form__field">
+                        <input
+                          type="text"
+                          id="company"
+                          name="company"
+                          required
+                        />
                       </div>
                     </td>
                   </tr>
+
+                  <!-- お名前 -->
                   <tr>
                     <th>
-                      <label for="company" class="inputLabel">お名前</label>
+                      <label for="name" class="c-form__label">お名前</label>
                     </th>
                     <td>
-                      <div class="inputField">
+                      <div class="c-form__field">
                         <input type="text" id="name" name="name" />
                       </div>
                     </td>
                   </tr>
 
+                  <!-- メールアドレス -->
                   <tr>
                     <th>
-                      <label for="email" class="inputLabel"
-                        >メールアドレス<span class="require">*</span>
+                      <label for="email" class="c-form__label">
+                        メールアドレス<span class="require">*</span>
                       </label>
                     </th>
                     <td>
-                      <div class="inputField">
+                      <div class="c-form__field">
                         <input type="email" id="email" name="email" required />
-                        <p class="errorText">
-                          正しい形式のメールアドレスを入力してください。
-                        </p>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>
-                      <label for="email" class="inputLabel">電話番号 </label>
-                    </th>
-                    <td>
-                      <div class="inputField">
-                        <input type="email" id="email" name="email" required />
-                        <p class="errorText">
-                          正しい形式のメールアドレスを入力してください。
-                        </p>
                       </div>
                     </td>
                   </tr>
 
+                  <!-- 電話番号 -->
                   <tr>
                     <th>
-                      <label for="contact_msg" class="inputLabel"
-                        >お問い合わせ内容<span class="require">*</span>
+                      <label for="tel" class="c-form__label">電話番号</label>
+                    </th>
+                    <td>
+                      <div class="c-form__field">
+                        <input type="tel" id="tel" name="tel" />
+                      </div>
+                    </td>
+                  </tr>
+
+                  <!-- お問い合わせ内容 -->
+                  <tr>
+                    <th>
+                      <label for="message" class="c-form__label">
+                        お問い合わせ内容<span class="require">*</span>
                       </label>
                     </th>
                     <td>
-                      <div class="inputField">
+                      <div class="c-form__field">
                         <textarea
-                          name="contact_msg"
-                          id="contact_msg"
+                          id="message"
+                          name="message"
                           cols="30"
                           rows="10"
                           required
                         ></textarea>
-                        <p class="errorText">
-                          お問合せ内容を入力してください。
-                        </p>
                       </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
+              <!-- /.c-form__table -->
 
-              <div class="privacyBox">
+              <!-- プライバシーポリシー -->
+              <div class="c-form__privacy-box">
                 <p>
                   <a
-                    href="http://www.sendai-lang.com/pdf/personal.pdf"
+                    href="privacy-policy.html"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >プライバシーポリシー</a
-                  >に同意して、送信してください。
+                  >
+                    プライバシーポリシー
+                  </a>
+                  に同意して、送信してください。
                 </p>
               </div>
 
-              <div class="formBtns">
-                <button class="buttonAction">この内容で送信する</button>
+              <!-- 送信ボタン -->
+              <div class="c-from__button">
+                <button type="submit" class="c-from__button-action">
+                  この内容で送信する
+                </button>
               </div>
             </div>
             <!-- /.c-form -->
