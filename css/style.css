@@ -605,7 +605,6 @@
 }
 
 .p-main-visual__texts h1 {
-  font-weight: normal;
   font-size: clamp(1.75rem, 1.295rem + 2.27vw, 3rem);
 }
 
@@ -630,6 +629,9 @@
 
 
 @media (min-width: 1024px) {
+  .p-main-visual{
+    padding-top: 80px;
+  }
 
   .p-main-visual__texts {
     padding: 8rem 0;
@@ -644,7 +646,7 @@
     bottom: 0;
     right: 0;
     width: 60vw;
-    height: 94%;
+    height: 88%;
 
   }
 
@@ -791,6 +793,7 @@
 
 .p-feature-list__desc {
   margin-top: 12px;
+  font-size: 16px;
 }
 
 @media (min-width: 1024px) {
@@ -812,6 +815,8 @@
 
   .p-feature-list__image {
     margin-top: 40px;
+
+    width: 100%;
   }
 
   .p-feature-list__image img {
@@ -1254,11 +1259,16 @@
 @media (min-width: 1024px) {
   .c-breadcrumb {
     padding: 24px 0;
+    padding-top: 80px;
   }
 }
 
 .c-breadcrumb__item {
   position: relative;
+}
+
+.c-breadcrumb__item:hover{
+  opacity: .6;
 }
 
 .c-breadcrumb__list {
