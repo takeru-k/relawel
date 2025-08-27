@@ -346,7 +346,14 @@
   width: 100%;
   margin-inline: auto;
   z-index: 100;
-  background: var(--bg-color);
+  position: fixed;
+  transition: 0.3s ease;
+  border-bottom: none;
+}
+
+.l-header.is-scrolled {
+  border-bottom: 1px solid var(--border-color); /* スクロール後に表示 */
+  background: #fff;
 }
 
 .l-header__wrap {
@@ -364,10 +371,6 @@
 }
 
 @media (min-width: 1200px) {
-  .l-header {
-    position: fixed;
-  }
-
   .l-header__logo img {
     width: 160px;
   }
@@ -591,10 +594,13 @@
 =================================*/
 
 .p-main-visual {
-  background: var(--bg-color);
+  padding-top: 60px;
   position: relative;
+  overflow: hidden;
 
 }
+
+
 
 .p-main-visual__wrap {
   margin-inline: auto;
@@ -605,12 +611,19 @@
 }
 
 .p-main-visual__texts h1 {
-  font-size: clamp(1.75rem, 1.295rem + 2.27vw, 3rem);
+  font-size: clamp(1.75rem, 1.114rem + 3.18vw, 3.5rem);
+  position: relative;
+}
+
+.p-main-visual__texts h1 span{
+  color: var(--main-color);
 }
 
 .p-main-visual__texts p {
-  margin-top: 12px;
-  font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+  margin-top: 16px;
+  font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem);
+  max-width: 600px;
+  text-align: justify;
 }
 
 
@@ -620,39 +633,67 @@
   position: relative;
 }
 
+  .p-main-visual__image::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    content: "";
+}
+
 .p-main-visual__image img {
   object-fit: cover;
   height: 100%;
   width: 100%;
-  border-top-left-radius: 100px;
 }
+
+
 
 
 @media (min-width: 1024px) {
   .p-main-visual{
-    padding-top: 80px;
+    padding-top: 76px;
+  }
+
+  .p-main-visual__wrap{
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .p-main-visual__texts {
-    padding: 8rem 0;
+    padding: 4rem 0 4rem;
+  }
+
+  .p-main-visual__texts h1{
+    margin-bottom: 36px;
   }
 
   .p-main-visual__texts p {
     margin-top: 20px;
+
   }
 
   .p-main-visual__image {
+    
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 60vw;
-    height: 88%;
-
+    width: 50vw;
+    height: 100%;
   }
 
-  .p-main-visual__image img {
-    border-top-left-radius: 200px;
-  }
+
+  .p-main-visual__image::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36rem;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    content: "";
+}
 }
 
 /*================================

@@ -1,34 +1,36 @@
 $(function () {
-  $('.js-btn').on('click', function () {        // js-btnクラスをクリックすると、
-    $('.l-header__nav, .c-hamburger__line').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
-  })
-
+  $(".js-btn").on("click", function () {
+    // js-btnクラスをクリックすると、
+    $(".l-header__nav, .c-hamburger__line").toggleClass("open"); // メニューとバーガーの線にopenクラスをつけ外しする
+  });
 });
 
 // toggle
-$(function(){
-	$('.c-toggle__header').click(function(){
-		$(this).toggleClass('selected');
-		$(this).next().slideToggle();
-	});
+$(function () {
+  $(".c-toggle__header").click(function () {
+    $(this).toggleClass("selected");
+    $(this).next().slideToggle();
+  });
 });
 
-// 下層ページのheaderの背景を白にする
 document.addEventListener("DOMContentLoaded", function () {
-  const header = document.querySelector('.l-header');
-  const breadcrumb = document.querySelector('.l-header + .c-breadcrumb');
+  const header = document.querySelector(".l-header");
 
-  if (header && breadcrumb) {
-    header.style.backgroundColor = '#fff';
-  }
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      header.classList.add("is-scrolled");
+    } else {
+      header.classList.remove("is-scrolled");
+    }
+  });
 });
 
 // .l-block--background の直後が .p-cta のとき、margin-bottom を 0 にする
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.l-block--background').forEach(block => {
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".l-block--background").forEach((block) => {
     const next = block.nextElementSibling;
-    if (next && next.classList.contains('p-cta')) {
-      block.style.marginBottom = '0';
+    if (next && next.classList.contains("p-cta")) {
+      block.style.marginBottom = "0";
     }
   });
 });
@@ -38,10 +40,10 @@ const items = document.querySelectorAll(".accordion button");
 
 items.forEach((item, index) => {
   // 各ボタンにユニークなIDを生成して設定
-  item.setAttribute('id', `accordion-button-${index + 1}`);
+  item.setAttribute("id", `accordion-button-${index + 1}`);
 
-  item.addEventListener('click', function() {
-    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', !isExpanded);
+  item.addEventListener("click", function () {
+    const isExpanded = this.getAttribute("aria-expanded") === "true";
+    this.setAttribute("aria-expanded", !isExpanded);
   });
 });
