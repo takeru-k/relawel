@@ -338,6 +338,12 @@
   font-size: clamp(1.5rem, 1.409rem + 0.45vw, 1.75rem);
 }
 
+@media not all and (min-width: 1023px){
+  .c-heading br{
+    display: none;
+  }
+}
+
 /*-------------------------
   ヘッダー
 -------------------------*/
@@ -1668,18 +1674,9 @@
   color: #fff;
 }
 
-.c-step__number {
-  border-radius: 50%;
-  color: #fff;
-  background: var(--dark-color);
-  height: fit-content;
-  padding: 8px;
-  margin-top: 4px;
-}
-
 @media (min-width: 1024px) {
-  .c-step__number {
-    padding: 4px 10px;
+  .c-step__num {
+    margin-top: 2px;
   }
 }
 
