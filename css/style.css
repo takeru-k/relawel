@@ -32,7 +32,7 @@
 :where(p) {
   line-height: 1.75;
   color: var(--text-color);
-  font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem);
+
 }
 
 :where(img) {
@@ -452,18 +452,15 @@
   color: var(--main-color);
 }
 
-@media (min-width: 768px) {
-  .l-header__wrap {
-    padding: 0;
-  }
-}
-
-
 @media (min-width: 1200px) {
   .l-header {
     padding: 0 40px;
     height: 76px;
     transition: background-color 0.3s ease;
+  }
+
+    .l-header__wrap {
+    padding: 0;
   }
 
   .l-header__menu {
@@ -624,6 +621,8 @@
   font-size: clamp(1.75rem, 1.114rem + 3.18vw, 3.5rem);
   position: relative;
   line-height: 1.6;
+  font-weight: normal;
+  margin-bottom: 20px;
 }
 
 .p-main-visual__texts h1 span{
@@ -635,6 +634,28 @@
   font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem);
   max-width: 600px;
   text-align: justify;
+}
+
+.p-main-visual__copy{
+  color: var(--main-color);
+  font-family: var(--english-font);
+  letter-spacing: .1em;
+  display: inline-block;
+  position: relative;
+  padding-left: 40px;
+  font-size: clamp(1rem, 0.955rem + 0.23vw, 1.125rem);
+}
+
+.p-main-visual__copy::before{
+    content: '';
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 1px;
+  background: #969696;
+  display: block;
 }
 
 
