@@ -378,7 +378,7 @@
 
 @media (min-width: 1200px) {
   .l-header__logo img {
-    width: 160px;
+    width: 180px;
   }
 }
 
@@ -455,8 +455,9 @@
 @media (min-width: 1200px) {
   .l-header {
     padding: 0 40px;
-    height: 76px;
+    height: 88px;
     transition: background-color 0.3s ease;
+    border-bottom: 1px solid #eee;
   }
 
     .l-header__wrap {
@@ -472,13 +473,32 @@
 
   .l-header__menu li{
     text-shadow:
-  0 0 4px rgba(255, 255, 255, 1),
-  0 0 8px rgba(255, 255, 255, 0.8);
-  }
+    0 0 4px rgba(255, 255, 255, 1),
+    0 0 8px rgba(255, 255, 255, 0.1);
+    font-size: 15px;
+    font-weight: normal;
+    color: #2e2e2e;
+    }
 
   .l-header__menu--contact {
-    margin-left: 16px;
-    padding-left: 24px;
+    border: 1px solid var(--main-color);
+    color: #fff;
+    text-align: center;
+    padding: 8px 40px;
+    border-radius: 20px;
+    display: block;
+    transition: .4s;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: var(--main-color);
+    
+  }
+
+  .l-header__menu .l-header__menu--contact{
+text-shadow: none;
+color: #fff;
+font-weight: normal;
   }
 
   .l-header__menu--contact::before {
@@ -488,17 +508,6 @@
     height: 16px;
     background: url(../images/header/mail.svg) no-repeat center center/contain;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .l-header__menu--contact::after {
-    position: absolute;
-    content: "";
-    width: 1px;
-    height: 20px;
-    background: var(--border-color);
-    left: -24px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -513,7 +522,7 @@
     width: 100%;
     height: 2px;
     background: var(--main-color);
-    bottom: -14px;
+    bottom: -8px;
     left: 0;
   }
 }
@@ -623,6 +632,7 @@
   line-height: 1.6;
   font-weight: normal;
   margin-bottom: 20px;
+  font-family: var(--title-font);
 }
 
 .p-main-visual__texts h1 span{
@@ -687,10 +697,11 @@
 @media (min-width: 1024px) {
   .p-main-visual{
     padding-top: 76px;
+    height: 90vh;
   }
 
   .p-main-visual__wrap{
-    padding-top: 100px;
+    padding-top: 120px;
     padding-bottom: 100px;
   }
 
@@ -724,6 +735,16 @@
     width: 36rem;
     height: 100%;
     background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    content: "";
+}
+
+  .p-main-visual__image::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
     content: "";
 }
 }
