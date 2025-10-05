@@ -4,7 +4,7 @@
   --font-color: #242422;
   --text-color: #4C4948;
   --bg-color: #f9f9f9;
-  --sub-color: #FCF9F7;
+  --sub-color: #FFFCF1;
   --dark-color: #37414F;
   --footer-font-color: #a6adb6;
   --base-font: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "arial";
@@ -21,12 +21,13 @@
   font-weight: 500;
   color: var(--font-color);
   line-height: 1.5;
-  font-feature-settings: "palt";
+  
   letter-spacing: .075em;
 }
 
 :where(h1, h2, h3, a) {
   letter-spacing: .04em;
+  font-feature-settings: "palt";
 }
 
 :where(p) {
@@ -61,7 +62,7 @@
 }
 
 .l-block--background {
-  background-color: var(--bg-color);
+  background-color: var(--sub-color);
   padding: 40px 0;
 }
 
@@ -481,7 +482,7 @@
     }
 
   .l-header__menu--contact {
-    border: 1px solid var(--main-color);
+    border: 1px solid var(--dark-color);
     color: #fff;
     text-align: center;
     padding: 8px 40px;
@@ -491,7 +492,7 @@
     position: relative;
     width: fit-content;
     margin: 0 auto;
-    background-color: var(--main-color);
+    background-color: var(--dark-color);
     
   }
 
@@ -501,16 +502,6 @@ color: #fff;
 font-weight: normal;
   }
 
-  .l-header__menu--contact::before {
-    position: absolute;
-    content: "";
-    width: 16px;
-    height: 16px;
-    background: url(../images/header/mail.svg) no-repeat center center/contain;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
 
   .current-menu-item {
     font-weight: bold;
@@ -927,8 +918,56 @@ font-weight: normal;
 
 
 /*================================
-	works-list
+	お客様の声
 =================================*/
+
+.p-review{
+  margin-top: 20px;
+  display: grid;
+  row-gap: 24px;
+}
+.p-review__item{
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+}
+
+.p-review__heading{
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.p-review__heading::after{
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: var(--main-color);
+  left: 0;
+  bottom: 0;
+}
+
+.p-review__textarea{
+  display: grid;
+  row-gap: 8px;
+  line-height: 2;
+}
+
+.p-review__textarea p{
+  font-size: 15px;
+}
+
+@media (min-width: 1024px){
+  .p-review__item{
+    padding: 24px 40px;
+  }
+
+  .p-review__heading{
+    margin-bottom: 24px;
+  }
+}
 
 .p-works-list__wrap {
   background: #fff;
@@ -1008,39 +1047,6 @@ font-weight: normal;
   }
 }
 
-/*================================
-	banner
-=================================*/
-
-.l-block+.l-banner {
-  margin-top: -40px;
-}
-
-@media (min-width: 1024px) {
-  .l-block+.l-banner {
-    margin-top: -120px;
-  }
-}
-
-
-.l-banner {
-  position: relative;
-  height: 200px;
-  width: 100vw;
-}
-
-.l-banner img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-
-}
-
-@media (min-width: 1024px) {
-  .l-banner {
-    height: 300px;
-  }
-}
 
 /*================================
 	info-panel
@@ -1353,7 +1359,7 @@ font-weight: normal;
 @media (min-width: 1024px) {
   .c-breadcrumb {
     padding: 24px 0;
-    padding-top: 80px;
+    padding-top: 108px;
   }
 }
 
@@ -2368,7 +2374,6 @@ div.wpcf7 .wpcf7-spinner {
 =================================*/
 
 .p-message {
-  max-width: 800px;
   margin: 30px auto 0;
 }
 
@@ -2386,12 +2391,8 @@ div.wpcf7 .wpcf7-spinner {
 }
 
 .p-message__profile p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-}
-
-.p-message__textarea {
-  margin-top: 24px;
 }
 
 .p-message__textarea p {
@@ -2402,7 +2403,7 @@ div.wpcf7 .wpcf7-spinner {
   .p-message__profile {
     position: absolute;
     top: 50%;
-    left: 12%;
+    left: 8%;
     transform: translateY(-50%);
   }
 
