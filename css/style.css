@@ -2280,7 +2280,8 @@ div.wpcf7 .wpcf7-spinner {
 }
 
 .p-rich-text__heading h2 {
-  font-size: clamp(1.5rem, 1.409rem + 0.45vw, 1.75rem);
+  font-size: clamp(1.5rem, 1.318rem + 0.91vw, 2rem);
+  line-height: 2;
 }
 
 .p-rich-text__textarea {
@@ -2292,6 +2293,8 @@ div.wpcf7 .wpcf7-spinner {
 @media (min-width: 1024px) {
   .p-rich-text__wrap {
     grid-template-columns: 400px 1fr;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 
   .p-rich-text__textarea {
@@ -2315,6 +2318,11 @@ div.wpcf7 .wpcf7-spinner {
   gap: 20px;
   align-items: center;
 }
+
+  .p-text-with-icons__text p {
+    color: var(--dark-color);
+    font-weight: bold;
+  }
 
 @media (min-width: 1024px) {
   .p-text-with-icons {
